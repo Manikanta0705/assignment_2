@@ -1,0 +1,77 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[breaklinks=true]{hyperref}
+
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+    \usepackage{amsmath}
+      
+\def\inputGnumericTable{}
+
+\bibliographystyle{IEEEtran}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+
+\parindent 0px
+
+\begin{document}
+\vspace{3cm}
+\title{ASSIGNMENT 2}
+\author{BT21BTECH11005 - MANIKANTA}
+
+\maketitle
+\textbf{PROBLEM}:-Given three identical Boxes $A$, $B$ and $C$, Box $A$ contains 2 gold and 1 silver coin, Box $B $contains 1 gold and 2 silver coins and Box $C$ contains 3 silver coins. A person chooses a Box at random and takes out a coin. If the coin drawn is of silver, find the probability that it has been drawn from the Box which has the remaining two coins also of silver.\\
+
+\textbf{SOLUTION}:-\\
+given,three boxes are equally likely\\
+so,\\
+\begin{enumerate}[label=]
+\item $\displaystyle P(A)= \dfrac{1}{3},\displaystyle P(B)= \dfrac{1}{3},\displaystyle P(C)= \dfrac{1}{3}$
+\end{enumerate}
+
+NO. OF GOLD COINS (GC) and SILVER COINS(SC) in the given three boxes are:-
+\begin{table}[ht!]
+ \input{tables/table1.tex}
+\caption{NO. OF COINS IN THREE BOXES}
+\label{Tables : TABLE}
+\end{table}\\
+
+Probability of GOLD COINS(GC) snd SILVER COINS(SC) in the given three boxes are:-
+ \begin{table}[ht!]
+ \input{tables/table2.tex}
+\caption{probability of GC and SC in three boxes}
+\label{Tables : TABLE}
+\end{table}\\
+
+now,
+by using BAYES THEOREM\\
+Probability that the coin drawn is silver from box $C$,is equal to
+\begin{align}
+P(C \mid S) &= \frac{P(C)P(\frac{S}{C})}{P(A)P(\frac{S}{A})+P(B)P(\frac{S}{B})+P(C)P(\frac{S}{C})}\\
+ &= \frac{\frac{1}{3} \times 1}{\frac{1}{3} \times \frac{1}{3}+\frac{1}{3} \times \frac{2}{3}+\frac{1}{3} \times 1
+ }\\
+ &= \frac{\frac{1}{3}}{\frac{1}{9}+\frac{2}{9}+\frac{1}{3}}\\
+ &= \frac{1}{3} \times \frac{9}{6}\\
+ P(C \mid S) &= \frac{1}{2}
+\end{align}
+$\therefore$ from$(5)$,\\
+\begin{enumerate}[label=]
+\item Probability that the coin drawn is silver from box $C$ = $\frac{1}{2}$.
+\end{enumerate}
+\end{document}
