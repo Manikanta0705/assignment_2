@@ -39,23 +39,17 @@
 \textbf{PROBLEM}:-Given three identical Boxes $A$, $B$ and $C$, Box $A$ contains 2 gold and 1 silver coin, Box $B $contains 1 gold and 2 silver coins and Box $C$ contains 3 silver coins. A person chooses a Box at random and takes out a coin. If the coin drawn is of silver, find the probability that it has been drawn from the Box which has the remaining two coins also of silver.\\
 
 \textbf{SOLUTION}:-\\
-given,three boxes are equally likely\\
-so,\\
-\begin{enumerate}[label=]
-\item $\displaystyle P(A)= \dfrac{1}{3},\displaystyle P(B)= \dfrac{1}{3},\displaystyle P(C)= \dfrac{1}{3}$
-\end{enumerate}
-
-NO. OF GOLD COINS (GC) and SILVER COINS(SC) in the given three boxes are:-
+See TABLE (I) and TABLE (II) for the input probabilities.
 \begin{table}[ht!]
+\centering
  \input{tables/table1.tex}
-\caption{NO. OF COINS IN THREE BOXES}
+\caption{ASSINGING RANDOM VARIABLES}
 \label{Tables : TABLE}
-\end{table}\\
+\end{table}
 
-Probability of GOLD COINS(GC) snd SILVER COINS(SC) in the given three boxes are:-
  \begin{table}[ht!]
  \input{tables/table2.tex}
-\caption{probability of GC and SC in three boxes}
+\caption{PROBABILITY VALUES OF EVENTS}
 \label{Tables : TABLE}
 \end{table}\\
 
@@ -63,12 +57,12 @@ now,
 by using BAYES THEOREM\\
 Probability that the coin drawn is silver from box $C$,is equal to
 \begin{align}
-P(C \mid S) &= \frac{P(C)P(\frac{S}{C})}{P(A)P(\frac{S}{A})+P(B)P(\frac{S}{B})+P(C)P(\frac{S}{C})}\\
+P(X = 2 \mid Y = 0) &= \frac{P(X = 2)P(Y = 0 \mid X = 2)}{\sum_{i=0}^{2} P(X = i)P(Y=0 \mid X = i)}\\
  &= \frac{\frac{1}{3} \times 1}{\frac{1}{3} \times \frac{1}{3}+\frac{1}{3} \times \frac{2}{3}+\frac{1}{3} \times 1
  }\\
  &= \frac{\frac{1}{3}}{\frac{1}{9}+\frac{2}{9}+\frac{1}{3}}\\
  &= \frac{1}{3} \times \frac{9}{6}\\
- P(C \mid S) &= \frac{1}{2}
+ P(X = 2 \mid Y = 0) &= \frac{1}{2}
 \end{align}
 $\therefore$ from$(5)$,\\
 \begin{enumerate}[label=]
